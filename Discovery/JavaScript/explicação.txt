@@ -1,0 +1,961 @@
+Aula 1 - Primeiros Passos {
+   
+  # A importancia da Sintaxe
+    * Toda linguagem tem
+    * Uma boa comunicação necessita de uma boa Sintaxe
+    * 82% dos erros para iniciantes de programação;
+
+  # Como executar o JavaScript 
+    * F12 => Console 
+    * CodePen 
+    * Vsc (Visual Studio Code)
+
+  #console.log('Bem vindo ao Starter')
+    * Mostrar algo em tela 
+
+  # Criar comentarios 
+    // comentarios em linha 
+    /*
+    comentario em bloco 
+    */
+}
+ 
+Aula 2 - Tipos de dados { 
+
+  JavaScript é orientado a objeto 
+
+  Conforme o ECMAScript standart temos 9 tipos de dados:
+
+    * Data types {
+      - Primitive/ Primitive value
+      - Structural
+      - Structural Primitive
+    }
+
+    * Primitivos {
+      - String
+      - Number
+      - Boolean
+      - Undefined
+      - Symbol
+      - BigInt
+    } 
+
+    * Estruturais {
+        # Object 
+          - Array 
+          - Map
+          - Set
+          - Date
+          - ...
+
+        # Function
+    }
+
+    * Primitivo Estrutural / Structural Root Primitive{
+      - Null 
+    } 
+      
+  Introdução {
+    # Tipos de dados 
+
+      * Gramatica
+        - Elementos da linguagem e suas combinações
+        - A arte de falar e escrever corretamente 
+      
+      * Vocabulário
+        - Conjunto de termos e expressões 
+        - Agrupamento de palavras
+
+      * Precisamos saber como escrever 
+      * Precisamos saber os significados 
+      * Precisamos continuar aprendendo, crescer nosso vocabulário.
+
+    ## Como vai ser a dinamica do aprendizado?
+
+      * Conceito e escrita 
+        
+        > Vamos aprender os tipos de dados mais utilizados na linguagem 
+          * Você sabia que é possível aprender 80% de uma lingua nova, com cerca de 20% do vocabulário? (até mesmo);
+  }
+  String {
+    
+    * Cadeia de caracteres 
+      
+      "" // aspas duplas 
+      '' // aspas simples 
+      `` // template literals ou template strings
+      * interpulação
+  }
+  Number {
+    * numeros 
+
+      33 // interios 
+      12.5 // reais 
+      NaN // Not a Number 
+      Infinity // infinito
+  }
+  Boolean {
+    * Somente 2 valores 
+      true // verdadeiro
+      false // falso
+  }
+  Undefined vs null {
+    * Undefined = indefinido 
+    * Null 
+      - nulo
+      - Objeto que não possui nada dentro
+      - diferente de indefinido
+  }
+  Object {
+    * Objeto
+    * Propriedades / Atributos
+    * Funcionalidade / Métodos 
+
+      { propriedades: "valor"}
+
+      console.log({
+        name:"Gaby",
+        idade: 36,
+        andar: function(){
+          console.log('andar')
+        }
+      })
+  }
+  Array (vetores) {
+    * Uma Lista 
+    * Agrupamento
+
+    ["Gaby", 36]
+  }
+}
+
+Aula 3 - Variáveis {
+  
+  * Variáveis {
+    - Nomes simbólicos para receber algum valor 
+    - Atalhos de código
+    - Identificadores 
+    - 3 palavras reservadas para criar uma variável 
+        * var {
+            var clima = "Quente"
+              clima = "frio"
+                console.log(clima)
+          }
+        * let {
+            let clima = "Quente"
+              clima = "frio"
+                console.log(clima)
+          }
+        * const {
+            - const - Não pode mudar o seu valor durante a aplicação
+                
+                const clima = "Quente"
+                  console.log(clima)
+            }
+
+  }
+
+  * Tipos dinâmicos {
+    - O Js é uma linguagem fracamente tipada e dinamica;
+    - Variáveis não precisam ter um tipo previamente definido (typeof)
+    - Podemos mudar o conteúdo da variável  
+  }
+
+  * Scope {
+
+    - Escopo determina a visibilidade de alguma varialvel no JS 
+      * Block statement {
+          
+          // vamos iniciar um bloco
+        { 
+          // aqui dentro é um bloco e posso colocar qualquer código
+          // aqui fechamos o bloco
+        }
+        O bloco, também criará um novo escopo. Chamamos de `block-scoped`
+
+        #var {
+          hoisting =>   // var é global e poderá funcionar fora de escopo de bloco
+            console.log('> existe x antes do bloco?', x)
+
+            {
+                 var x = 0
+            }
+
+            console.log('> existe x depois do bloco?',x)
+        }
+
+        # let e const {
+          // const e let são locais e só funcionam no escopo onde foi criada
+
+          console.log('> existe y antes do bloco?', y)
+
+            {
+              let y = 0 
+            }
+
+          console.log('> existe y antes do bloco?', y)
+        }
+      }
+  }
+
+  * Nomeando Variáveis {
+    * Js é case-sensitive (sensivel ao caso)
+    * Js aceita a cadeia de caracteres Unicode
+
+    - Posso:
+      # Iniciar com esses caracteres especiais : $ _
+      # Iniciar com letras
+      # Colocar acentos
+      # Letras maíusculas e minúsculas fazem diferença
+
+    - Não Posso:
+      # Iniciar com números 
+      # Colocar espaços vazios no Nome
+
+    - Idel:
+      # Criar nomes que fazem sentido
+      # Que explique o que a variável é ou faz
+      # camelCase
+      # snake_case
+      # Escrever em inglês
+  }
+}
+
+Aula 4 - Praticando e avançando {
+  
+  * Declarando assignment var{
+      // Variaveis e tipos de dados 
+      // Declaração or declaration
+        var name 
+
+      // Assignment or Atribuição de valores 
+        name = "Gabi"
+
+      // que tipo de dado foi colocado na varialvel
+        console.log(typeof name)
+  }
+
+  * Agrupando declarações {
+     let age = 20
+     let isHuman = true 
+
+     let age, isHuman 
+
+     age = 18
+     isHuman = true 
+
+    // multiplos argumentos na função
+    console.log(name, age, isHuman)
+  }
+
+  * Concatenando e interpolando variaveis {
+    
+    // escrita do texto + variáveis 
+    console.log('o' + name + 'tem' + age + 'anos.')
+
+    // interpolando valores com template literals or 
+    template strings  
+    console.log(`o ${name} tem ${age} anos.`)
+  }
+  
+  * Object {
+      const person = {
+        name: 'John',
+        age:30,
+        weight: 88.6,
+        isAdmin: true
+      }
+
+      console.log(person.name)
+                
+                or
+
+      console.log(`${person.name} tem ${person.age} anos`)
+  }
+
+  * Arrays {
+    const animals = [
+      'lion',
+      'Monkey',
+      'cat',
+      {
+        name: 'dog',
+        age:3
+      }
+    ]
+
+    // acessar valores dentro do Array 
+      console.log(animals[0]) => um unico item da lista 
+      console.log(animals.lenght) => quantidade de itens 
+      console.log(animals[2].name) => pegar a propriedade  o objeto 
+
+      // não misturar o padrão de busca do projeto 
+  }
+
+  * Exercicios {
+
+    1. Declare uma variavel de nome weight 
+       let weight;
+
+    2. Que tipo de dado é a variável acima?
+        console.log(typeof weight) - Undefined
+
+    3. Declare uma variável e atribua valores para cada um dos dados:
+      * name : String 
+      * age: Number(integer)
+      * weight: Number (float)
+      * isSubscribed: Boolean
+
+      let name = "Gaby"
+      let age = 28 
+      let weight = 12.5
+      let isSubscribed = true 
+
+    4. A variavel student abaixo é de que tipo de dados? 
+
+      let student = {};
+      console.log(typeof student) => Objeto
+
+    5. Atribua  a ela as mesmas propriedades e valores do exercicio 3.
+    
+      let student = {
+        name: "Gaby",
+        age: 28 ,
+        weight: 12.5,
+        isSubscribed: true
+      }
+
+    6. Mostre no console a seguinte mensagem:
+      
+      <name> de idade <age> pesa <weight> kg.
+
+      Atenção, substitua <name>, <age> e <weight> pelos valores de cada propriedade do objeto
+
+     console.log(`${student.name} de idade ${student.age} pesa ${student.weight} kg.`)
+
+     7. Declare uma variavel do tipo Array, de nome students e atribua a ela nenhum valor, ou seja, somente o Array vazio; 
+
+      let students = []
+
+    8. Retribua valor para variavel acima, colocando dentro dela o objeto student da questão 4. (Não copiar e colar o objeto), mas usar o objeto criado e inserir ele no Array)
+
+      students = [
+        student
+      ]
+
+      
+
+    9. Coloque no console o valor da posição zero do Array acima 
+
+      console.log(students[0])
+
+    10. Crie um novo student e coloque na posição 1 do Array students 
+    
+      const john = {
+        name: 'John',
+        age: 23,
+        weight: 74.8,
+        isSubscribed: true
+      }
+
+      students = [ 
+        student,
+        john
+      ]
+
+      students[1] = john (outra forma)
+      console.log(students)
+
+    11. Sem rodar o código responda qual é a resposta do código abaixo e  por que? Após sua resposta, rode o código e veja se você acertou.
+
+      console.log(a)
+      var a = 1
+
+      Resposta - Undefined 
+  }
+}
+
+Aula 5 - Funções {
+  * Functions{
+    
+    // declaration - declaração da função 
+    // function statement
+
+    function  createPhhrases() {
+        // Criar um aplicativo de frases motivacionais 
+        console.log('Estudar é muito bom')
+        console.log('Paciência e percistencia')
+        console.log('Revisão é a mãe do aprendizado')
+    }
+
+    //execute , run, call, invoke
+    createPhhrases()
+
+    console.log('Fim do programa')
+  }
+
+  * Argumentos e parâmetros {
+    // function expression
+    // function anonymous 
+    // parametros (parameters)
+      const sum = function(number1, number2){
+      console.log(number1 + number2)
+      
+      sum(2,3) // argumentos - arguments
+  }
+
+  * Retornando valores dentro da função {
+
+    let total = 0
+    const sum = function(number1, number2){
+    let total = number2 + number1
+    // o segredo é o return
+    return total 
+    }
+
+    let number11 = 35
+    let number21 = 35
+    sum(number1, number2)
+
+    /* console.log(`O numero 1 é ${number1}`)
+    console.log(`O numero 2 é ${number2}`) */
+    console.log(`a soma é ${sum(number1, number2)}`)
+    console.log(total)
+  }
+
+  * Outra maneira de entender funçoes {
+    // Função é um liquidificador
+
+    function fazerSuco(fruta1, fruta2) {
+      return fruta1 + fruta2
+    }
+
+    const copo = fazerSuco('banana', 'maça')
+
+    console.log(copo)
+  }
+
+  * Function Scope {
+      // function scope 
+
+      let subject
+
+      function createThink(subject) {
+        subject = 'study'
+        return subject
+      }
+      console.log(subject)
+      createThink()
+      console.log(subject)
+  }
+  
+  * Function Hoisting {
+      // function hoisting
+
+    // por debaixo dos panos roda 
+    sayMyName()
+
+    function sayMyName() {
+      console.log("Gabys")
+    }
+
+    ***********************************
+
+    // por debaixo dos panos não roda por se tratar de const que não altera o seu estado  
+    sayMyName()
+    const sayMyName = function () {
+      console.log("Gabys")
+    }
+
+    **********************************
+
+    //por debaixo dos panos não roda por se tratar de const que não altera o seu estado 
+
+    var sayMyName = function sayMyName() {
+      console.log("Gabys")
+    }
+  }
+
+  * Arrow function {
+    // arrow function - Jeito mais facil de escrever as funções 
+
+    const sayMyName = (/*paramentros*/) => {
+    console.log('Gabys')
+    }
+  }
+
+  * Callback function {
+    // Callback function - é uma função que está passansdo de parametro para outra função 
+
+    function sayMyName(name){
+      console.log('antes de executar uma callback')
+      name()
+      console.log('Depois de executar uma callback')
+    }
+
+    sayMyName(
+      () => {
+        console.log('estou em uma callback')
+      }
+    )
+  }
+
+  * Funções construtora{ 
+    /*
+    Function() construtor
+
+    * expressão new
+    * criar um novo objeto 
+    * this keyword
+
+    */ 
+
+    function Person() {
+      this.name = name 
+      this.walk = function() {
+        return this.name + "andando"
+      }
+    }
+
+    const gabys = new Person("Gabys")
+    const joao = new Person("Joao")
+
+    console.log(gabys.walk)
+    console.log(joao.name)
+
+    }
+}
+
+Aula 6 - Manipulando Dados {
+
+  * ProtoType {
+    * prototype-based language
+    * prototype chain
+    * .__proto__ (encapsula o number ou string em objeto)
+  }
+
+  * Type conversion/ coersion {
+    Type conversion(typecasting)vs type coersion
+    *Alteração de um tipo de dado para outro tipo 
+    transformar string em numero ou numero em string de forma manual pois o Java script 
+    faz a conversão manual para string
+  }
+
+  * Strings em números {
+    // Manipulando String e Números
+    // Transformar uma String em Numeros e um Numero em String 
+
+    let string = "123"
+    console.log(Number(string))
+
+      VS
+
+    let number = 321
+    String(number)
+  }
+
+  * Contando caracteres e digitos {
+      // Manipulando String e Números 
+      // Contar quantos caracteres tem uma palavra e quantos digitos  tem um numero 
+    .lenght mostra caracteres tem um palavra, porém não funciona em numeros, 
+    a menos que vc converta a numero para string 
+      let word = "Paralelepipedo"
+      console.log(word.lenght)
+  }
+
+  * Casas decimais {
+    // Manipulando Strings e Números 
+
+    // Transformar um número quebrado com 2 casas decimais 
+    e trocar ponto por vígula 
+
+    let number = 389238.866398696
+    console.log(number.toFixed(2).replace(".", ",")) -> só funciona com o retorno em strings// com numero com precisa do replace 
+  }
+
+  *  Maiúsculas e Minúsculas {
+    // Manipulando Strings e Números 
+    // Transforme letras minúsculas e maiúsculas. Faça o contrário disso também 
+
+    let word = " Programar é muito bacana"
+    console.log(word.toUpperCase()) -> Transforma a frase com todas as letras maiusculas  
+    console.log(word.toLowerCase()) -> Transforma a frase com todas as letras maiusculas  
+  }
+
+  * Encontrando palavra em frase {
+    // Manipulando Strings
+
+    // verificar se o texto contém a palavra Amor
+      let phrase = "Eu quero viver o Amor!"
+      console.log(phrase.includes("Amor")) -> includes() -> é um método caseSensitive 
+  }
+
+  * Separando Strings {
+    //Manipulando Strings e Arrays 
+
+    // Separe um texto que contém espaços,em um novo array onde cada texto é uma posição do array.
+      let phrase = "Eu quero viver de Amor!"
+
+      let myArray = phrase.split(" ")
+      console.log(myArray) 
+
+      Depois disso, transforme o array em um texto e onde eram espaços, coloque _
+
+      let phraseWithUnderScore = myArray.join("_")
+      console.log(phraseWithUnderScore)
+  }
+
+  * Criando array com construtor {
+    // Manipulando Arrays 
+
+    // Criar Array com construtor 
+
+    let myArray = ['a','b','c'] -> versão normal
+    let myArray = new Array('a','b','c') -> construindo com construtor 
+  }
+
+  * Elementos do Array {
+    // Manipulando Arrays
+    //Contar Elementos de um array 
+    console.log([
+      "a",
+      {type:"array"},
+      function() {return "alo"}
+    ].lenght) -> conta quantos itens temos dentro do array 
+
+    console.log([
+      "a",
+      {type:"array"},
+      function() {return "alo"}
+    ][2]()) -> acessar a função  
+  }
+
+  * Strings para arrays {
+    //Manipulando Arrays
+    //Transformar uma cadeia de caracteres em elementos de um array
+
+    let word = "Manipulação"
+    console.log(Array.from(word)) ->  transforma a string ou numero em uma array 
+  }
+
+  * Manipulando Strings {
+    // Manipulando Arrays 
+
+    let techs = ["html","css","js"]
+
+    // adicionar um item no fim 
+      console.log(techs.push("node.js"))
+
+    // adicionar no começo
+    console.log(techs.unshift("node.js"))
+
+    // remover do fim 
+    console.log(techs.pop())
+
+    // remover do começo 
+    console.log(techs.shift())
+
+    // pegar somente alguns elementos do array
+      console.log(techs.slice(1,3))
+
+    // remover 1 ou mais items em qualquer posição do array 
+    console.log(techs.splice(1,2))
+
+    // encontrar a posição de um elemento array 
+    let index = techs.indexOf('css')
+  }
+}
+
+Aula 7 - Expressões e Operadores {
+  * Expressões e Operadores {
+    /* Expressões e Operadores 
+      - Expressions -> Ponto e virgula é necessário as vezes 
+      - Operators
+        Binary
+        Unary
+        Ternary (false ? 'alo' : 'nada')
+    */
+  }
+
+  * NEW {
+    * left-hand-side expression
+    * criar um novo objeto
+
+    let name = new String('Gaby') -> faz com que a variável vire um objeto 
+
+    __proto__ verifica o objeto  
+  }
+
+  * Typeof  /  delete {
+
+    Operadores unários 
+    typeof -> fornece o tipo de dado 
+    delete -> deleta uma propriedade do objeto 
+  }
+
+  * Operadores Aritiméticos {
+
+    -  Multiplicação ->  (3 * 5)
+    -  Divisão -> (12 / 2)
+    -  Soma -> (10 + 20)
+    -  Subtração -> (5 - 1)
+    -  Resto da divisão -> (11 % 3) = 2
+    -  Incremento -> ++num ou num++
+    -  Decremento -> --num ou num--
+    -  Exponencial -> (3 ** 3) = 3*3*3
+    
+  } 
+
+  * Grouping Operator {
+    - Grouping Operator() -> altera a ordem da precedência da conta 
+
+  }
+
+  * Operadores de comparação igual e diferente de {
+    // Operadores de comparação
+    //Irá comprar valores e retornar um Boolean com resposta á comparação
+
+    let one = 1
+    let one = 2
+    = atribuição simples  (recebe)
+    += atribuição + incremento
+    -= atribuição + decremento  
+    *= atribuição + multiplicação  
+    /= atribuição + divisão   
+    **= atribuição + exponenciação
+    %= atribuição + resto 
+
+    == igual a 
+    != diferente 
+    === estritamente igual (Compara os valores e os tipos dos elementos)
+    !== estritamente diferente (Compara os valores e os tipos dos elementos)
+    > Maior que
+    < Menor 
+    >= Maior igual 
+    <= Menor igual 
+
+  }
+
+  * Operadores lógicos {
+    AND && 
+    OR ||
+    NOT !
+  }
+
+  * Operador Condicional (ternário) {
+    // Dependendo da condição, nós receberemos valores diferentes 
+    // Condição então valor 1 se não valor 2 
+    // condition ? value1 : value2 
+
+    Exemplos 
+    let pao = true
+    let queijo = true 
+
+    const niceBreakFast = pao && queijo ? 'Café top' : 'Café Ruim'
+  }
+
+  * Operadores para String {
+    // comparison (comparação)
+      'a' == 'a'
+
+    // concatenation (concatenação)
+    //retorna a união de suas strings 
+    let alpha = 'alpha'
+    alpha + 'bet' + s 
+    alpha +='bet'(Atualizar a string)
+
+    Cuidado com o sinal de + pois o JS sempre concatena e retorna uma string mesmo sendo numero
+
+  }
+
+  * Falsy e Truthy {
+    Falsy
+    Quando um valor é considerado false em contextos onde um booleano é obrigatório (condicionais e loops )
+    false, 0, -0, "", null, Undefined, NaN
+  
+  Truthy
+
+  Quando um valor é considerado true em contextos onde um 
+  booleano é obrigatório (condicionais e loops )
+  true, {}, [], 1 , 3.23, "0", "false", -1, Infinity, -Infinity
+
+  }
+
+  * Precedência  dos operadores 
+
+  - Grouping  ()
+  - Negação e incremento  ! ++ --
+  - Multiplicação e Divisão  * /
+  - Adição e Subtração  - +
+  - Relacional < <= > >=
+  - Igualdade == != === !==
+  - AND &&
+  - OR  ||
+  - Condicional ? :
+  - Assignment (Atribuição)  = += -= *= /= **= %=
+}
+
+Aula 8 - condicionais e controle de fluxo {
+  * Controle de fluxo de aplicação {
+    // Control Flow 
+  }
+  * IF e ELSE {
+    //if (se) / else(se não) -> colocar a condição em uma variavel 
+    if (condição) {
+      return;
+    } else if (condição){
+
+    }else {
+      return;
+    }
+  }
+
+  *Switch {
+    //Switch
+    switch () {
+      case ...:
+      break
+      case ...:
+      break
+      default
+    }
+  }
+
+  * Throw e try/catch {
+    // Throw 
+    function sayMyName(name = '') {
+      if(name==='') {
+        throw 'Nome é obrigatório' -> ele para a execução da função 
+      }
+    }
+
+      //try ... catch 
+      try {
+        sayMyName()
+      } catch(e) {
+    }
+  }
+}
+
+Aula 9 - Estruturas de repetição {
+  * For {
+    //Estrutura de repetição
+      // For  (Para) - variavel ; condição; incrementar ou decrementar
+      controles 
+      * break - para a execução do loop
+      * continue - pula a execução do momento
+    for(let i = 0 ; i < 10 ; i++){
+
+    }
+  }
+
+  * While {
+    // while - enquanto 
+
+    let i = 0;
+    while(i<10){
+      console.log(i)
+      i++;
+    }
+  }
+
+  * For... of {
+    let name = 'Gabys'
+    let names = ['hahah','jbeobqo','ugeiooe']
+
+    for (let char of name){
+      console.log(char)
+    }
+  }
+
+  * For ...in {
+    let person = {
+      name:'Jonh',
+      age:30,
+      weight: 88.6
+    }
+    for(let property in person){
+      console.log(property)
+    }
+  }
+}
+
+Exercícios - 
+
+1- Transformar notas escolares {
+  Crie um algoritmo que transforme as notas do sistema numérico 
+  para sistema em caracteres do tipo A B C 
+
+  * de 90 para cima - A
+  * entre 80 - 89 - B
+  * entre 70 - 79 - C
+  * entre 60 - 69 - D
+  * menor que 59 - F
+
+  let nota ; 
+  let notaA = nota >= 90 && nota <= 100;
+  let notaB = nota <= 89 && nota >= 80;
+  let notaC = nota <= 79 && nota >= 70;
+  let notaD = nota <= 69 && nota >= 60;
+  
+  if(notaA){
+    console.log('Parabéns sua nota é A');
+  }else if (notaB ) {
+    console.log('Parabéns sua nota é B');
+  }else if (notaC ) {
+    console.log('Tenho certeza que vai se esforçar mais na próxima, sua nota é  C');
+  }else if (notaD) {
+    console.log('Precisa estudar mais,  sua nota é D');
+  }else {
+    console.log('Sua nota é F, está de recuperação');
+  }
+}
+
+2- Sistema de gastos familiar {
+  Crie um objeto que possuirá 2 propriedades, ambas do tipo Array:
+   * receitas: [];
+   * despesas: [];
+
+   Agora, crie uma função que irá calcular o total de receitas e despesas e irá mostrar 
+   uma mensagem se a familia está saldo positivo e negativo, seguido do valor do saldo. 
+
+   let family = {
+     receitas: [2500,3000],
+     despesas: [600,700,1500]
+   }
+
+    function sum(array) {
+      let total = 0;
+      for(let value of array){
+        total +=value
+      }
+      return total
+    }
+
+   function calculate() {
+     const calcReceita = sum(family.receitas)
+     const calcDespesas = sum(family.despesas)
+
+     const total = calcReceita - calcDespesas
+      let text = "Negativo"
+
+     if (total >= 0){
+       text = "positivo"
+     }
+
+     console.log(`Seu saldo é ${text}:  ${total.toFixed(2)} R$`)
+   }
+
+   calculate()
+}
+
+3- Celsius em fahrenheit {
+  Crie uma função que receba uma string em celsius ou fahrenheit e
+   faça a transformação de uma unidade para outra
+
+   C = (F -32) * 5/9
+   F = C * 9/5 + 32
+
+   function transform()
+}

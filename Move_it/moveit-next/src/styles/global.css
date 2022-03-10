@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.theme_dark {
+  --dark: #2f2e2e;
+  --background:#2f2e2e;
+  --gray-line: #dcdde0;
+  --text: #E8E8E8;
+  --text-highlight: #b3b9ff;
+  --title: #fff;
+  --red: #e83f5b;
+  --green: #4cd62b;
+  --blue:#5965E0;
+  --blue-dark:#4953B8;
+  --blue-twitter: #2aa9e0;
+}
+
+
+:root {
+  --white:#fff;
+  --background: #f2f3f5;
+  --gray-line: #DCDDE0;
+  --text: #666;
+  --text-highlight: #B3B9FF;
+  --title: #2E384D;
+  --red: #E83F5B;
+  --green:#4CD62B;
+  --blue:#5965E0;
+  --blue-dark:#4953B8;
+  --blue-twitter:#2AA9E0;
+}
+
+@media(max-width: 1000px) {
+ html {
+    font-size: 93.75%;
+  }
+}
+
+@media(max-width: 720px) {
+  html {
+     font-size: 87,5%;
+   }
+ }
+
+body {
+  background-color:var(--background);
+  color:var(--text);
+}
+
+body, input, textarea, button {
+  font: 400 1rem "Inter", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

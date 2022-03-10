@@ -1,0 +1,184 @@
+# Introdução
+
+- O que significa CSS?
+
+* Cascading Style Sheet
+* Código para criar estilos no HTML
+* HTML é a estrutura, e o CSS é a beleza
+* Não é uma linguagem  de programação
+* É uma linguagem style sheet 
+
+## Vamos ao Exemplo
+
+# Comentários 
+
+* Não irá afetar o seu código 
+* Ajuda a lembrar blocos de códigos
+* Deixa dicas para leitura 
+* Ajuda outros a entenderem 
+* Nunca esqueça de fechar um comentário aberto 
+
+Comentários começam com `/*` e terminam `*/`.
+
+# Anatomia
+
+h1 {
+  color: blue;
+  font-size: 60px;
+  backdround: gray; 
+}
+
+* Selector 
+* Declaration 
+* Properties
+* Property Value 
+
+# Seletores 
+
+Conecta um elemento HTML com o CSS
+
+## Tipos 
+
+* Global Selector `*`
+* Element/Type selector ` h1,h2, p , div`
+* Id Selector `#box, #container`
+* Class Selector `.red, .m-4`
+* Attribute selector, Pseudo-class, pseudo-element, e outros 
+
+
+# Box Model 
+
+Trabalhamos com telas , com a montagem de caixas
+
+* Você irá perceber que (quase) tudo são caixas do CSS
+* Posicionamentos, tamanhos, espaçamentos, bordas, Cores
+* Caixa pode ficar ao lado uma da outra , ou em cima 
+* Elementos HTML são caixas 
+
+
+# Origem do CSS
+- Adicionando CSS
+
+# inline 
+* atributo`style`
+
+<h1 style="color:red"> </h1>
+
+# <style>
+*tag html que irá conter o css
+
+<style>
+
+h1{
+  color:red;
+}
+ </style>
+
+# <link>
+* arquivo css externo
+<link rel="stylesheet" href="style.css">
+
+# @import(regra)
+* arquivo css externo 
+
+# A Cascata (cascading)
+
+A escolha do browser de qual regra aplicar, caso haja muitas regras para o mesmo elemento.
+* Seu estilo é lido de cima para baixo. 
+É levado em consideração 3 fatores 
+
+1. Origem do estilo 
+2. Especificidade
+3. Importância
+
+## Origem do estilo 
+
+inline > tag style > tag link
+
+### Especificidade 
+
+É um cálculo matemático, onde, cada tipo de seletor e origem do estilo, possuem valores a serem considerados. 
+0. Universal selector, combinators e negation pseudo-class (:not())
+1. Element type selector e pseudos-elements(::before, ::after)
+10. Classes e attribute selectors([type="redio"])
+100. ID selector
+1000. Inline 
+
+# Regra important 
+sintaxe: !important
+
+* cuidado, evite o uso 
+* não é considerado uma boa prática
+* quebra o fluxo natural da cascata 
+
+São raras as ocasiões nas quais se devem usar um iportant, pois é em geral uma má pratica, visto que quebra o fluxo natural da cascata e pode acabar te atrapalhando caso você a deixe em algum lugar no seu código.
+
+Portanto evite ao máximo seu uso.
+
+# At Rules 
+
+* Está relacionado ao comportamento do CSS
+* Começa com sinal de `@` seguido de indentificador e valor 
+
+## Exemplos Comuns 
+
+-@import  /** incluir um CSS externo */
+
+-@media \* regras condicionais para dispositivos */
+
+-@font-face \* fontes externas */
+
+-@key-frames \* Animação */
+
+
+# ShortThand
+
+*Junção de propriedades
+*resumido
+*legivel
+
+Algumas das características do shorthand:
+Não irá considerar propriedades anteriores, ou seja, caso faça um shorthand, apenas ele será considerado, quaisquer propriedades anteriores serão substituídas pelas do shorthand.
+
+Os valores que não forem especificados irão assumir o valor padrão.
+
+Por fim, geralmente, a ordem descrita não importa, mas, caso haja muitas propriedades com valores semelhantes, poderemos encontrar problemas.
+
+## Detalhes 
+* Não irá considerar propriedades anteriores 
+* valores não especificados irão assumir o valor padrão 
+* geralmente, a ordem descrita não importa, mas, se houver muitas propriedades com valores semelhantes, poderemos encontrar problemas. 
+
+## Propriedades que aceitam shorthand. 
+
+site css - mozila 
+
+
+# Funçoes 
+
+* Nome seguido de abre e fecha parentesis 
+* recebe argumentos 
+
+# DevTools 
+
+Ferramenta - Uma das ferramentas mais importantes para o desenvolvedor CSS é o DevTools (do inglês, Ferramentas de Desenvolvedor), é recomendado que você estude e faça uso da mesma, pois será muito utilizada.
+
+# Cuidados com a escrita
+
+É importante prestar atenção à sua escrita do CSS, identar seu código para facilitar a leitura, e mais importante, manter tudo organizado e funcionando!
+
+# Vendor Prefixes 
+
+São coisas que permitem que browsers adiocionem features a fim de colocar em uso alguma novidade que vemos no CSS.
+
+Exemplos:
+p {
+	-webkit-background-clip: text; /*Chrome, Safari, iOS e Android*/
+	-moz-background-clip: text; /* Mozilla (Firefox) */
+	-ms-background-clip: text; /* Internet Explorer ou Edge*/
+	-o-background-clip: text; /* Opera */
+Você também pode consultar se a feature pode ser utilizada através dos sites:
+https://ireade.github.io/which-vendor-prefix
+
+https://caniuse.com
+
