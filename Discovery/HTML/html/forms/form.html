@@ -11,8 +11,37 @@
   <!-- Vázio = reload -->
   <!-- Get = aparece / Padrão -->
   <!-- Post = esconde -->
-      <label for="nome">Nome</label>
-      <input id="nome" type="text">
+    <form action="">
+      <fieldset>
+        <legend>Contato</legend>
+        <div>
+          <label for="nome">Nome:</label>
+          <br>
+          <input id="nome" name="nome" type="text">
+          <br>
+          <br>
+        <div>
+          <label for="e-mail">E-mail:</label>
+          <br>
+          <input type="email" name="e-mail" id="e-mail">
+          <br><br>
+        </div>
+
+        <div>
+          <label for="msg">Menssagem:</label>
+          <br>
+          <textarea id="msg" name="msg" cols="20" rows="10"></textarea>
+          <br>
+          <br>
+        </div>
+
+        <input type="submit" value="Enviar">
+       
+      </fieldset>
+
+
+    </form>
+ 
   
 </body>
 </html>
