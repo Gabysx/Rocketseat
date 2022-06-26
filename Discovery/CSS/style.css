@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+}
+
+header {
+  /* height: 100px;
+  border: 7px dashed aqua;
+  padding: 16px; */
+}
+ 
+main {
+
+  background-color: rgb(60, 30, 90);
+  background-image: url(https://cdn.domestika.org/c_limit,dpr_1.0,f_auto,q_auto,w_820/v1499895283/content-items/002/011/975/Astronauta-original.jpg?1499895283);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-origin: padding-box;
+  background-clip: padding-box;
+  background-attachment: fixed;
+  
+  /* Shorthand */
+  background: rgb(60, 30, 90) url(https://cdn.domestika.org/c_limit,dpr_1.0,f_auto,q_auto,w_820/v1499895283/content-items/002/011/975/Astronauta-original.jpg?1499895283) no-repeat center top / 50px border-box content-box fixed;
+
+  /* Gradiente */
+  background: linear-gradient(180deg, aqua, black),
+  radial-gradient(rgb(30,55,80,30), rgb(120,120,120));
+  
+}
