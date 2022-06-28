@@ -382,7 +382,7 @@ Aula 5 - Funções {
     // declaration - declaração da função 
     // function statement
 
-    function  createPhhrases() {
+    function  createPhrases() {
         // Criar um aplicativo de frases motivacionais 
         console.log('Estudar é muito bom')
         console.log('Paciência e percistencia')
@@ -390,7 +390,7 @@ Aula 5 - Funções {
     }
 
     //execute , run, call, invoke
-    createPhhrases()
+    createPhrases()
 
     console.log('Fim do programa')
   }
