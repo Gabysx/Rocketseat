@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap');
+
+*{
+  margin: auto;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #EDF2FF;
+}
+
+.img{
+  width: 215px;
+  height: 215px;
+
+  border: solid 4px #4263EB;
+  border-radius: 50%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+}
+
+.titles h1{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.1rem;
+
+  text-align: center;
+
+  color: #00082F;
+
+   margin-bottom: 0.5rem;
+}
+
+.titles p {
+  margin-bottom: 3rem ;
+  
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 150%;
+
+  text-align: center;
+
+  color: rgba(0, 8, 47, 0.8);
+
+}
+
+li {
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 80px;
+  gap: 10px;
+
+  width: 300px;
+  height: 53px;
+
+  background: #4263EB;
+  border-radius: 6px;
+}
+
+a{
+  text-decoration: none;
+}
+
+li a {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+li:hover{
+  background: #364FC7;
+
+}
+
+footer p{
+  width: 300px;
+  display: inline-block;
+ 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+ 
+  text-align: center;
+  margin-top: 3rem;
+  margin-left: 30px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: rgba(0, 8, 47, 0.6);
+}
+
+footer a {
+  color: #00082F;
+}
