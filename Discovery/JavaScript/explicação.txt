@@ -483,6 +483,8 @@ Aula 5 - Funções {
     const sayMyName = (/*paramentros*/) => {
     console.log('Gabys')
     }
+
+    sayMyName()
   }
 
   * Callback function {
@@ -898,6 +900,7 @@ Exercícios -
   let notaB = nota <= 89 && nota >= 80;
   let notaC = nota <= 79 && nota >= 70;
   let notaD = nota <= 69 && nota >= 60;
+  let notaD = nota < 60 && nota >= 0;
   
   if(notaA){
     console.log('Parabéns sua nota é A');
@@ -907,8 +910,10 @@ Exercícios -
     console.log('Tenho certeza que vai se esforçar mais na próxima, sua nota é  C');
   }else if (notaD) {
     console.log('Precisa estudar mais,  sua nota é D');
-  }else {
+  }else if (notaF){
     console.log('Sua nota é F, está de recuperação');
+  }else {
+    console.log('Nota Inválida')
   }
 }
 
@@ -957,5 +962,13 @@ Exercícios -
    C = (F -32) * 5/9
    F = C * 9/5 + 32
 
-   function transform()
+   function transform() {
+
+    const celsius = (number) => {
+      C = (number - 32) * 5/9
+    }
+    const fah = (number) => {
+      F = number * 9/5 + 32
+    }
+   }
 }
