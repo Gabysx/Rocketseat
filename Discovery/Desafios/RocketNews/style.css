@@ -1,0 +1,146 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: #121214;
+  --text-color: #E1E1E6;
+  --title-color: #04D361;
+  --form-color: #A8A8A8;
+  --bg-button-color: #8257e5;
+  --ft-text:'League Spartan';
+  --ft-title: 'Work Sans';
+
+}
+
+body{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  position: relative;
+  background: var(--body-bg-color);
+}
+header{
+  position: relative;
+  width:50vw;
+  background: var(--body-bg-color);
+}
+.logo{
+  width: 40%;
+  margin-top: 3.12rem ;
+  margin-left:1.87rem;
+}
+.right > img{ 
+  position: absolute;
+  top: 0px;
+  width:70vw;
+  height: 100vh;
+  right:0px;
+}
+.left{
+  position:relative;
+  background: var(--body-bg-color);
+  width:50%;
+  height:100vh;
+}
+.text{
+  margin: 5.75rem 2.31rem 3.12rem 2.25rem;
+}
+
+h1{
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+
+  color: var(--title-color);
+}
+
+h2{
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1rem;
+
+  margin-top: 0.65rem;
+  margin-bottom: 0.55rem;
+
+  color: var(--text-color);
+}
+.text > p {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+
+  color: var(--text-color);
+}
+
+.leed{
+  margin: 3.12rem 0px 3.12rem 2.25rem;
+}
+.leed > p {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 138.73%;
+
+  margin-bottom: 1.05rem;
+  color: var(--form-color);
+}
+.form{
+  width: 49.87rem;
+  display:flex;
+  flex-direction:flex-start ;
+}
+
+.form > input{
+  width: 49.87rem;
+  height:3rem;
+  padding: 0.95rem 1.05rem;
+
+  filter: drop-shadow(4px 10px 15px rgba(0, 0, 0, 0.5));
+}
+
+.form > img {
+  padding:0.75rem;
+  background-color:var(--bg-button-color);
+}
+.leed > div > input:focus{
+  border-left: 6px solid var(--title-color);
+}
+.btn{
+  margin-left: 2.25rem ;
+
+
+}
+.btn-form {
+  display: flex;
+  justify-content: flex-start;
+  gap:0.5rem;
+}
+
+.btn-form > input {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 138.73%;
+
+  background-color: transparent;
+  border:none;
+
+  color:var(--bg-button-color);
+
+}
