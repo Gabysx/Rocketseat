@@ -35,7 +35,7 @@ body{
 main{
   display: flex;
   flex-direction:column;
-  width: 50vw;
+  width: 65vw;
 }
 
 main > section{
@@ -43,14 +43,14 @@ main > section{
 }
 
 aside{  
-  width:50vw;
+  width:65vw;
   height: 100vh;
-  order:2;
+  order:1;
 }
 
 .img{
  
-  background: url('./assets/read_news.jpg') right center no-repeat;
+  background: url('./assets/read_news.jpg') right  no-repeat;
   background-size: cover;
 }
 
@@ -115,8 +115,8 @@ h2{
 }
 
 .form > input{
-  
-  width: 70vw;
+
+  width: 60vw;
   height:3rem;
   padding: 0.95rem 1.05rem;
 
