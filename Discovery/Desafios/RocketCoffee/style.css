@@ -1,0 +1,139 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #000;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  gap: 2rem;
+  list-style: none;
+  
+  
+}
+
+ul > li {
+  font: 0.9rem/1.2rem 'Manrope', sans-serif;
+ 
+  z-index: 2;
+ 
+
+}
+
+li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header > input{
+  cursor: pointer;
+  padding: 0.7rem 2.2rem;
+
+  font: 0.8rem 'Manrope', sans-serif ;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+ 
+  border: 1px solid #8257E5;
+  border-radius: 6px;
+  background: transparent;
+ 
+  z-index: 2;
+
+}
+
+header input:hover{
+  background: #fff;
+  color:#000;
+  border: 2px solid #8257E5;
+
+  font-weight: 700;
+}
+
+.content{
+  margin-top: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#blur1{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+#blur2{
+  position: absolute;
+  top: 0;
+  right: 0;
+ 
+}
+
+
+.content h1 {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 109px;
+  letter-spacing: -0.03em;
+
+  color: #FFFFFF;
+
+}
+.content h2{
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 109px;
+  letter-spacing: -0.03em;
+
+   text-shadow:#8257E5 1px -1px, #8257E5 -1px 1px, #8257E5 1px 1px, #8257E5 -1px -1px
+}
+.img{
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+}
+.img > img{
+  position: absolute;
+  bottom: 0;
+  width: 80vw;
+  z-index: 1;
+}
