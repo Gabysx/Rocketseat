@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <%- include('../components/head'); %>
+
+<body class="container">
+  <%- include('../components/header'); %>
+  
+  <main>
+    <div class="jumbotron">
+      <h1>Contruindo com EJS</h1>
+      <p>Bora aprender pra ganhar money</p>
+      <p><%= subtitle %></p>
+    </div>
+
+    <ul>
+      <% qualitys.forEach(function(quality){%>
+        <li>
+          <strong><%= quality.title %></strong> <%= quality.message %>
+
+        </li>
+      <% }) %> 
+    </ul>
+
+  </main>
+
+  <%- include('../components/footer'); %>
+
+</body>
+</html>
